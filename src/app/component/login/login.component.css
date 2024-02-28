@@ -1,0 +1,35 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh;
+  background: url(ad.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow:0 0 30px rgb(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform .5s, height .2s ease;
+}
+
+
+
