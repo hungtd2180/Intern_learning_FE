@@ -1,0 +1,28 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()" class="form-box login">
+  <h2>Login</h2>
+  <div>
+    <div class="input-box">
+      <span class="icon"><i class="bi bi-person"></i></span>
+      <input type="text" name="username" id="username" formControlName="username" required>
+      <label>Username</label>
+    </div>
+    <div class="input-box">
+      <span class="icon"><i class="bi bi-lock"></i></span>
+      <input type="password" name="password" id="password" formControlName="password" required>
+      <label>Password</label>
+      <!--          <div *ngIf="loginForm.get('password')?.errors?.['minlength']" style="color: tomato;padding-top: 5px;font-size: 15px;"> Must be more than 6 characters.</div>-->
+      <!--          <div *ngIf="loginForm.get('password')?.errors?.['minlength']" style="color: tomato;padding-top: 5px;font-size: 15px;"> Must be not more than 32 characters.</div>-->
+      <div *ngIf="isError == 404" style="color: tomato;padding-top: 5px;font-size: 15px;"> Sai tên đăng nhập hoặc mật khẩu.</div>
+      <div *ngIf="isError >= 400 && isError != 404" style="color: tomato;padding-top: 5px;font-size: 15px;"> Lỗi khác : {{isError}}</div>
+    </div>
+    <div class="ingat">
+      <label><input type="checkbox">
+        Remember me</label>
+      <a class="ms-5" href="#">Forgot Password</a>
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid" id="Submit" class = "btn">Login</button>
+    <div class="login-register">
+      <p>Don't have account?<span class="register-link" (click)="changeRegister.emit()">Register</span></p>
+    </div>
+  </div>
+</form>
