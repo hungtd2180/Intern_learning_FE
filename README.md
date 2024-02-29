@@ -1,6 +1,7 @@
 # PersonManagement
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+NodeJs version 16.16.0 and Bootstrap version 5.3.3
 
 ## Development server
 
