@@ -30,9 +30,9 @@ export class SigninComponent implements OnInit {
   login(){
     this.user = this.loginForm.value;
     new Promise<boolean>((resolve, reject) => {
-      this.loginService.login(this.user).subscribe((user)=>{
+      this.loginService.login(this.user).subscribe((data : any)=>{
         console.log("login successfully");
-        this.storageService.setObject('user', user);
+        this.storageService.set('user', data.userId)
         resolve(true);
         this.router.navigate(['/home']);
       }, (error: HttpErrorResponse) => {

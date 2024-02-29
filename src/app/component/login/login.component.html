@@ -1,6 +1,8 @@
 <div class="login-container">
   <div class="wrapper">
-    <app-signin *ngIf="isSignIn == true" (change)="onChange()"></app-signin>
-    <app-register *ngIf="isSignIn==false" (changeLogin)="onChangeLogin()"></app-register>
+    <app-signin *ngIf="isSignIn == true"
+                (changeRegister)="isSignIn= !isSignIn"></app-signin>
+    <app-register *ngIf="isSignIn==false"
+                  (changeLogin)="isSignIn= !isSignIn"></app-register>
   </div>
 </div>

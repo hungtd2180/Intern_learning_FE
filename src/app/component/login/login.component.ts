@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  isSignIn = true;
-  Constructor(){}
+  isSignIn : boolean;
+  constructor(){
+    this.isSignIn = true;
+  }
   ngOnInit() {}
-  onChange(){
+  onChangeRegister(){
     this.isSignIn = !this.isSignIn;
   }
   onChangeLogin(){

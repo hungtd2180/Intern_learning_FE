@@ -1,1 +1,11 @@
-<p>item-list works!</p>
+<div class="container-fluid">
+  <h1><i class="bi bi-house"></i> Dashboard</h1>
+  <br>
+  <table class="table table-striped">
+    <app-item *ngFor="let u of users | async"
+                  [user]="u"
+              (delete)="onDeleteUser($event)"
+              (update)="itemForEdit()"></app-item>
+
+  </table>
+</div>

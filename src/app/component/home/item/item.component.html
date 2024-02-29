@@ -1,1 +1,9 @@
-<p>item works!</p>
+<tr>
+  <td class="name"><img src="assets/image/{{user.avatar}}" class="rounded-circle" style="width: 30px; height: 30px">{{user.name}}</td>
+  <td class="mail">{{user.email}}</td>
+  <td class="desc">{{user.description}}</td>
+  <td class="action">
+    <i class="bi bi-pen" style="padding-right: 5px; cursor: pointer; color: blue" (click)="updateItem()"></i>
+    <i *ngIf="checkItem()" class="bi bi-x-lg" style="padding-left: 5px; cursor: pointer; color: red; border-left: 1px solid #000" (click)="remove()"></i>
+  </td>
+</tr>

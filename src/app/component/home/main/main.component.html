@@ -1,1 +1,5 @@
-<p>main works!</p>
+<app-header></app-header>
+<app-navbar [status]="isEditing" (isShowing)="isEditing = !isEditing"></app-navbar>
+<app-item-list *ngIf="!isEditing" (itemEdit)="isEditing = !isEditing"></app-item-list>
+<app-form *ngIf="isEditing" (isEdited)="isEditing = !isEditing"></app-form>
+<app-footer></app-footer>

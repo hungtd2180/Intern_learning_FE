@@ -7,6 +7,7 @@ import {FormComponent} from "./component/home/form/form.component";
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'home/index', component: MainComponent},
   {path: 'home', component: MainComponent},
   {path: 'home/edit', component: FormComponent}

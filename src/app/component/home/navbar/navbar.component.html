@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<div class="container-fluid d-flex flex-row align-items-center" style="background-color: #ededed ">
+  <div *ngIf="status == false; else reverse" class="w-100">
+    <button type="button" class="btn btn-primary w-50">Dashboard</button>
+    <button type="button" class="btn btn-outline-warning w-50" (click)="isShowing.emit()">Form</button>
+  </div>
+  <ng-template #reverse>
+    <div class="w-100">
+      <button type="button" class="btn btn-outline-primary w-50" (click)="dashboardClick()">Dashboard</button>
+      <button type="button" class="btn btn-warning w-50">Form</button>
+    </div>
+
+  </ng-template>
+
+</div>
+

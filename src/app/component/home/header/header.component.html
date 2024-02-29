@@ -1,1 +1,42 @@
-<p>header works!</p>
+<div class="container.flud position-relative" style="border: 1px solid #000">
+  <div class="navbar default-layout-navbar col-lg-12 col-12 p-0 position-relative d-flex flex-row" style="border-bottom: 1px solid black">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"><img src="assets/image/fav-icon-v2.ico" style="width: 150px; height: 100px;" ></div>
+    <div class="text-center d-flex align-items-center justify-content-center">
+      <h1>User Management</h1>
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-stretch">
+      <div class="search-field d-none d-md-block ">
+        <form class="d-flex align-items-center h-100 ">
+          <div class="input-group-lg " style="left: 0">
+            <input type="text" class="form-control bg-transparent border-2" placeholder="Search users">
+          </div>
+        </form>
+      </div>
+      <ul class="navbar-nav navbar-nav-right d-flex flex-row align-items-center">
+        <li class="nav-item d-inline-block">
+          <div class="d-inline-block">
+            <img src="assets/image/{{avatar}}" class="rounded-circle" style="height: 50px; width: 50px">
+          </div>
+          <div class="d-inline-block ms-2">
+            <p class="mb-1 text-black"> {{ username }}</p>
+          </div>
+        </li>
+        <li class="nav-item d-lg-block ms-5">
+          <i class="bi bi-fullscreen"></i>
+        </li>
+        <li class="nav-item ms-5">
+          <i class="bi bi-envelope"></i>
+        </li>
+        <li class="nav-item ms-5">
+          <i class="bi bi-bell"></i>
+        </li>
+        <li class="nav-item ms-5">
+          <i class="bi bi-power" (click)="logout()"></i>
+        </li>
+        <li class="nav-item ms-5 me-5">
+          <i class="bi bi-circle"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
